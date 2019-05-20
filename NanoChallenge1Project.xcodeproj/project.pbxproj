@@ -293,7 +293,7 @@
 		54F0EEC0228FF5C20053C5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MFA5A335Y;
 				INFOPLIST_FILE = NanoChallenge1Project/Info.plist;
@@ -311,7 +311,7 @@
 		54F0EEC1228FF5C20053C5FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MFA5A335Y;
 				INFOPLIST_FILE = NanoChallenge1Project/Info.plist;

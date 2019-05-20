@@ -48,7 +48,7 @@ class PlayAreaViewController: UIViewController {
         gamePoints = 0
         updateScoreLabel(gamePoints)
         scoreLabel.textColor = .orange
-        scoreLabel.isHidden = false
+        scoreLabel.isHidden = true
         oneGameRound()
     }
     
@@ -57,7 +57,7 @@ class PlayAreaViewController: UIViewController {
         updateScoreLabel(gamePoints)
         displayRandomButton()
         
-        timer = Timer.scheduledTimer(withTimeInterval: 0.75, repeats: false) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
             if self.state == GameState.playing
             {
                 if self.currentButton  == self.goodButton {
