@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		544CD66B228FF7F6001F24BE /* PlayAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544CD66A228FF7F6001F24BE /* PlayAreaViewController.swift */; };
 		544CD66D228FFC83001F24BE /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544CD66C228FFC83001F24BE /* FinishViewController.swift */; };
+		54EE15FF22927D7A00281275 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE15FE22927D7A00281275 /* GameOverViewController.swift */; };
 		54F0EEB1228FF5C10053C5FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F0EEB0228FF5C10053C5FC /* AppDelegate.swift */; };
 		54F0EEB3228FF5C10053C5FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F0EEB2228FF5C10053C5FC /* ViewController.swift */; };
 		54F0EEB6228FF5C10053C5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54F0EEB4228FF5C10053C5FC /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		544CD66A228FF7F6001F24BE /* PlayAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAreaViewController.swift; sourceTree = "<group>"; };
 		544CD66C228FFC83001F24BE /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		54EE15FE22927D7A00281275 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		54F0EEAD228FF5C10053C5FC /* NanoChallenge1Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge1Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F0EEB0228FF5C10053C5FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54F0EEB2228FF5C10053C5FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				54F0EEB0228FF5C10053C5FC /* AppDelegate.swift */,
 				54F0EEB2228FF5C10053C5FC /* ViewController.swift */,
 				54F0EEB4228FF5C10053C5FC /* Main.storyboard */,
+				54EE15FE22927D7A00281275 /* GameOverViewController.swift */,
 				544CD66C228FFC83001F24BE /* FinishViewController.swift */,
 				544CD66A228FF7F6001F24BE /* PlayAreaViewController.swift */,
 				54F0EEB7228FF5C20053C5FC /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				544CD66D228FFC83001F24BE /* FinishViewController.swift in Sources */,
 				544CD66B228FF7F6001F24BE /* PlayAreaViewController.swift in Sources */,
 				54F0EEB1228FF5C10053C5FC /* AppDelegate.swift in Sources */,
+				54EE15FF22927D7A00281275 /* GameOverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
