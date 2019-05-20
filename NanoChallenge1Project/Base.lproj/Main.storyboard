@@ -74,7 +74,6 @@
                                 </state>
                                 <connections>
                                     <action selector="goodPressed:" destination="Tsn-gF-F7m" eventType="touchDown" id="2oK-GW-qqs"/>
-                                    <action selector="goodPressed:" destination="Tsn-gF-F7m" eventType="touchUpInside" id="TAA-wE-e4h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N5-y9-lCZ">
@@ -101,6 +100,7 @@
                     </view>
                     <connections>
                         <outlet property="badButton" destination="9N5-y9-lCZ" id="K3q-GJ-fER"/>
+                        <outlet property="emotImage" destination="PXz-Ph-rJS" id="dpO-7g-QNd"/>
                         <outlet property="goodButton" destination="sGi-pw-TsI" id="Nf6-1r-pJ2"/>
                         <outlet property="scoreLabel" destination="vZQ-gW-Q9j" id="m5V-kv-ZBu"/>
                         <outlet property="startGameButton" destination="cOD-zW-DM2" id="DU6-Xe-paR"/>
@@ -140,13 +140,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
                                 <color key="textColor" red="0.99585229158401489" green="0.78292781114578247" blue="0.015248110517859459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="360-lN-bmW">
-                                <rect key="frame" x="126" y="402" width="163" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

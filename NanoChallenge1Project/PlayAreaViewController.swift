@@ -14,7 +14,10 @@ class PlayAreaViewController: UIViewController {
     @IBOutlet var goodButton: UIButton!
     @IBOutlet var badButton: UIButton!
     @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var emotImage: UIImageView!
     
+    var myImage: [UIImage] =  []
+    var imageView: [UIImageView] = []
     var gameButtons = [UIButton]()
     var gamePoints = 0
     
@@ -32,6 +35,11 @@ class PlayAreaViewController: UIViewController {
         scoreLabel.isHidden = true
         gameButtons = [badButton,goodButton]
         setupFreshGameState()
+        
+        for i in 0...19
+        {
+            myImage.append(UIImage(named: "emot\(i)")!)
+        }
 }
     
     func startNewGame()
@@ -49,7 +57,7 @@ class PlayAreaViewController: UIViewController {
         updateScoreLabel(gamePoints)
         displayRandomButton()
         
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.75, repeats: false) { _ in
             if self.state == GameState.playing
             {
                 if self.currentButton  == self.goodButton {
@@ -70,10 +78,15 @@ class PlayAreaViewController: UIViewController {
     
     
     @IBAction func goodPressed(_ sender: Any) {
-        gamePoints = gamePoints + 1
-        updateScoreLabel(gamePoints)
+        gamePoints += 1
         goodButton.isHidden = true
         timer?.invalidate()
+        emotImage.image = myImage[gamePoints]
+        if(gamePoints ==  19)
+        {
+           performSegue(withIdentifier: "finishViewSegue", sender: self)
+        }
+        
         oneGameRound()
     }
     
