@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addLayout" translatesAutoresizingMaskIntoConstraints="NO" id="KHu-Nd-0yp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addLayout-1" translatesAutoresizingMaskIntoConstraints="NO" id="KHu-Nd-0yp">
                                 <rect key="frame" x="0.0" y="791" width="414" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2U6-HY-LMd">
-                                <rect key="frame" x="124" y="538" width="166" height="61"/>
+                                <rect key="frame" x="-22" y="364" width="458" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="playButton"/>
                                 <connections>
@@ -83,14 +83,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOD-zW-DM2">
-                                <rect key="frame" x="159" y="553" width="97" height="48"/>
+                                <rect key="frame" x="138" y="561" width="140" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
                                 <state key="normal" title="START!">
                                     <color key="titleColor" red="0.04767860485" green="1" blue="0.29066700130000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="startPressed:" destination="Tsn-gF-F7m" eventType="touchUpInside" id="Cdz-Dj-7Vz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNN-fF-Xk1">
+                                <rect key="frame" x="80" y="666" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="goodButton2"/>
+                                <connections>
+                                    <action selector="good2Pressed:" destination="Tsn-gF-F7m" eventType="touchUpInside" id="DEp-tk-Ldh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ks-XX-FIt">
+                                <rect key="frame" x="312" y="666" width="41" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="badButton2"/>
+                                <connections>
+                                    <action selector="bad2Pressed:" destination="Tsn-gF-F7m" eventType="touchUpInside" id="UYL-sv-3Q5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,8 +115,10 @@
                     </view>
                     <connections>
                         <outlet property="badButton" destination="9N5-y9-lCZ" id="K3q-GJ-fER"/>
+                        <outlet property="badButton2" destination="2ks-XX-FIt" id="Qcb-Eo-TQN"/>
                         <outlet property="emotImage" destination="PXz-Ph-rJS" id="dpO-7g-QNd"/>
                         <outlet property="goodButton" destination="sGi-pw-TsI" id="Nf6-1r-pJ2"/>
+                        <outlet property="goodButton2" destination="mNN-fF-Xk1" id="fPf-dq-6sv"/>
                         <outlet property="scoreLabel" destination="vZQ-gW-Q9j" id="m5V-kv-ZBu"/>
                         <outlet property="startGameButton" destination="cOD-zW-DM2" id="DU6-Xe-paR"/>
                         <segue destination="5Jo-Db-5jP" kind="showDetail" identifier="finishViewSegue" id="O8V-Kn-ypJ"/>
@@ -120,27 +138,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FAILED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-uO-aau">
-                                <rect key="frame" x="97" y="212" width="220" height="93"/>
+                                <rect key="frame" x="97" y="125" width="220" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="85"/>
-                                <color key="textColor" red="1" green="0.11097520909789726" blue="0.1357207591305627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.80557346343994141" green="0.21710050106048584" blue="0.18035206198692322" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuD-eA-Dw4">
-                                <rect key="frame" x="77" y="662" width="261" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYw-OO-cw3">
+                                <rect key="frame" x="173" y="226" width="69" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="reloadButton"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
+                                <color key="textColor" red="0.91114431619644165" green="0.43072757124900818" blue="0.17244189977645874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="failedLayout" translatesAutoresizingMaskIntoConstraints="NO" id="OdH-MK-P0P">
+                                <rect key="frame" x="-44" y="629" width="502" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuD-eA-Dw4">
+                                <rect key="frame" x="77" y="385" width="261" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="retryButton"/>
                                 <connections>
                                     <action selector="reloadButtonPressed:" destination="qAN-Sa-m09" eventType="touchUpInside" id="YI1-pt-iBC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYw-OO-cw3">
-                                <rect key="frame" x="173" y="313" width="69" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
-                                <color key="textColor" red="0.99585229158401489" green="0.78292781114578247" blue="0.015248110517859459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LHm-4M-cGc"/>
@@ -187,16 +209,20 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addLayout" width="414" height="100"/>
+        <image name="addLayout-1" width="414" height="100"/>
         <image name="addLayout2" width="414" height="85"/>
         <image name="badButton" width="187" height="206"/>
+        <image name="badButton2" width="187" height="206"/>
         <image name="emot0" width="208" height="208"/>
+        <image name="failedLayout" width="407" height="274"/>
         <image name="goodButton" width="203" height="203"/>
+        <image name="goodButton2" width="203" height="203"/>
         <image name="happyEmot" width="206" height="206"/>
-        <image name="playButton" width="287" height="107"/>
-        <image name="reloadButton" width="324" height="107"/>
+        <image name="playButton" width="180" height="172"/>
+        <image name="retryButton" width="131" height="131"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fJc-gT-eLG"/>
+        <segue reference="bMU-FH-Q6D"/>
+        <segue reference="UaH-VK-yB3"/>
     </inferredMetricsTieBreakers>
 </document>
