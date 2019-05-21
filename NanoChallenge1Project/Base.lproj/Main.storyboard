@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2U6-HY-LMd">
-                                <rect key="frame" x="-22" y="364" width="458" height="168"/>
+                                <rect key="frame" x="106" y="343" width="203" height="196"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="playButton"/>
                                 <connections>
@@ -35,7 +35,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="Tsn-gF-F7m" kind="showDetail" identifier="playAreaSegue" id="fJc-gT-eLG"/>
+                        <segue destination="uEq-nx-Zeo" kind="showDetail" identifier="playAreaSegue" id="yev-Rz-06r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -55,7 +55,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGi-pw-TsI">
-                                <rect key="frame" x="93" y="224" width="44" height="44"/>
+                                <rect key="frame" x="68" y="244" width="59" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="goodButton">
                                     <color key="titleColor" red="0.04767860485" green="1" blue="0.29066700130000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N5-y9-lCZ">
-                                <rect key="frame" x="300" y="235" width="39" height="43"/>
+                                <rect key="frame" x="255" y="241" width="58" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="badButton">
                                     <color key="titleColor" red="1" green="0.12825202560000001" blue="0.067341007899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -94,15 +94,31 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNN-fF-Xk1">
-                                <rect key="frame" x="80" y="666" width="44" height="44"/>
+                                <rect key="frame" x="102" y="757" width="59" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="goodButton2"/>
                                 <connections>
                                     <action selector="good2Pressed:" destination="Tsn-gF-F7m" eventType="touchUpInside" id="DEp-tk-Ldh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gs4-bR-ODi">
+                                <rect key="frame" x="300" y="756" width="57" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="goodButton3"/>
+                                <connections>
+                                    <action selector="good3Pressed:" destination="Tsn-gF-F7m" eventType="touchUpInside" id="nAx-Fi-c3t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXZ-P9-aTg">
+                                <rect key="frame" x="68" y="649" width="59" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="badButton3"/>
+                                <connections>
+                                    <action selector="bad3Pressed:" destination="Tsn-gF-F7m" eventType="touchUpInside" id="Fhc-hK-cLm"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ks-XX-FIt">
-                                <rect key="frame" x="312" y="666" width="41" height="43"/>
+                                <rect key="frame" x="300" y="638" width="57" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="badButton2"/>
                                 <connections>
@@ -116,9 +132,11 @@
                     <connections>
                         <outlet property="badButton" destination="9N5-y9-lCZ" id="K3q-GJ-fER"/>
                         <outlet property="badButton2" destination="2ks-XX-FIt" id="Qcb-Eo-TQN"/>
+                        <outlet property="badButton3" destination="YXZ-P9-aTg" id="beh-Nj-RoQ"/>
                         <outlet property="emotImage" destination="PXz-Ph-rJS" id="dpO-7g-QNd"/>
                         <outlet property="goodButton" destination="sGi-pw-TsI" id="Nf6-1r-pJ2"/>
                         <outlet property="goodButton2" destination="mNN-fF-Xk1" id="fPf-dq-6sv"/>
+                        <outlet property="goodButton3" destination="Gs4-bR-ODi" id="wEe-iO-YcC"/>
                         <outlet property="scoreLabel" destination="vZQ-gW-Q9j" id="m5V-kv-ZBu"/>
                         <outlet property="startGameButton" destination="cOD-zW-DM2" id="DU6-Xe-paR"/>
                         <segue destination="5Jo-Db-5jP" kind="showDetail" identifier="finishViewSegue" id="O8V-Kn-ypJ"/>
@@ -168,12 +186,12 @@
                         <viewLayoutGuide key="safeArea" id="LHm-4M-cGc"/>
                     </view>
                     <connections>
-                        <segue destination="Tsn-gF-F7m" kind="showDetail" identifier="reloadSegue" id="UaH-VK-yB3"/>
+                        <segue destination="uEq-nx-Zeo" kind="showDetail" identifier="reloadSegue" id="Z0F-2E-iI5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nkc-Wn-z1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921.73913043478262" y="833.70535714285711"/>
+            <point key="canvasLocation" x="1523" y="927"/>
         </scene>
         <!--Finish View Controller-->
         <scene sceneID="e12-0O-F9f">
@@ -207,22 +225,71 @@
             </objects>
             <point key="canvasLocation" x="1718.840579710145" y="137.94642857142856"/>
         </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="fL6-Ry-syB">
+            <objects>
+                <viewController id="uEq-nx-Zeo" customClass="LoadingViewController" customModule="NanoChallenge1Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lsh-Vh-xR0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutor" translatesAutoresizingMaskIntoConstraints="NO" id="Fh6-vn-YG9">
+                                <rect key="frame" x="87" y="430" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="eCg-cd-R8y">
+                                <rect key="frame" x="139" y="239" width="59" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="K6Z-rT-S5W">
+                                <rect key="frame" x="178" y="239" width="58" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="j0P-KB-kTS">
+                                <rect key="frame" x="216" y="239" width="60" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdX-00-YZQ">
+                                <rect key="frame" x="103" y="164" width="222" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kxq-mN-TUU"/>
+                    </view>
+                    <connections>
+                        <outlet property="Star1" destination="eCg-cd-R8y" id="sP8-pB-Ia1"/>
+                        <outlet property="Star2" destination="K6Z-rT-S5W" id="gSo-jM-RC1"/>
+                        <outlet property="Star3" destination="j0P-KB-kTS" id="kaL-OP-MjK"/>
+                        <segue destination="Tsn-gF-F7m" kind="showDetail" identifier="backToStartSegue" id="LSj-Dj-b2n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05U-Z6-9Cx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521.73913043478262" y="926.78571428571422"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Star" width="34" height="31"/>
         <image name="addLayout-1" width="414" height="100"/>
         <image name="addLayout2" width="414" height="85"/>
         <image name="badButton" width="187" height="206"/>
         <image name="badButton2" width="187" height="206"/>
+        <image name="badButton3" width="203" height="203"/>
         <image name="emot0" width="208" height="208"/>
         <image name="failedLayout" width="407" height="274"/>
         <image name="goodButton" width="203" height="203"/>
         <image name="goodButton2" width="203" height="203"/>
+        <image name="goodButton3" width="187" height="206"/>
         <image name="happyEmot" width="206" height="206"/>
         <image name="playButton" width="180" height="172"/>
         <image name="retryButton" width="131" height="131"/>
+        <image name="tutor" width="313" height="151"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bMU-FH-Q6D"/>
-        <segue reference="UaH-VK-yB3"/>
+        <segue reference="Z0F-2E-iI5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import  AVFoundation
 
 class PlayAreaViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class PlayAreaViewController: UIViewController {
     @IBOutlet var emotImage: UIImageView!
     @IBOutlet var goodButton2: UIButton!
     @IBOutlet var badButton2: UIButton!
+    @IBOutlet var badButton3: UIButton!
+    @IBOutlet var goodButton3: UIButton!
     
     var myImage: [UIImage] =  []
     var imageView: [UIImageView] = []
@@ -35,7 +38,7 @@ class PlayAreaViewController: UIViewController {
         super.viewDidLoad()
         
         scoreLabel.isHidden = true
-        gameButtons = [badButton,goodButton,goodButton2,badButton2]
+        gameButtons = [badButton,goodButton,goodButton2,badButton2,goodButton3,badButton3]
         setupFreshGameState()
         
         for i in 0...19
@@ -59,12 +62,19 @@ class PlayAreaViewController: UIViewController {
         updateScoreLabel(gamePoints)
         displayRandomButton()
         
-        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
             if self.state == GameState.playing
             {
                 if self.currentButton  == self.goodButton {
                     self.gameOver()
-                } else
+                } else if self.currentButton == self.goodButton2
+                    {
+                        self.gameOver()
+                } else if self.currentButton == self.goodButton3
+                {
+                    self.gameOver()
+                }
+                else
                 {
                     self.oneGameRound()
                 }
@@ -88,7 +98,6 @@ class PlayAreaViewController: UIViewController {
         {
            performSegue(withIdentifier: "finishViewSegue", sender: self)
         }
-        
         oneGameRound()
     }
     
@@ -107,11 +116,26 @@ class PlayAreaViewController: UIViewController {
         {
             performSegue(withIdentifier: "finishViewSegue", sender: self)
         }
-        
         oneGameRound()
     }
     
     @IBAction func bad2Pressed(_ sender: Any) {
+        badButton.isHidden = true
+        timer?.invalidate()
+        gameOver()
+    }
+    @IBAction func good3Pressed(_ sender: Any) {
+        gamePoints += 1
+        goodButton.isHidden = true
+        timer?.invalidate()
+        emotImage.image = myImage[gamePoints]
+        if(gamePoints ==  19)
+        {
+            performSegue(withIdentifier: "finishViewSegue", sender: self)
+        }
+        oneGameRound()
+    }
+    @IBAction func bad3Pressed(_ sender: Any) {
         badButton.isHidden = true
         timer?.invalidate()
         gameOver()
@@ -136,6 +160,7 @@ class PlayAreaViewController: UIViewController {
     
     func gameOver()
     {
+        UIDevice.vibrateHeavy()
         state = GameState.gameOver
         scoreLabel.textColor = .yellow
         performSegue(withIdentifier: "gameOverSegue", sender: self)
@@ -174,10 +199,19 @@ class PlayAreaViewController: UIViewController {
     {
         scoreLabel.text = "\(newValue)"
     }
+    
+}
 
-    
-    
-    
+extension UIDevice
+{
+    static func vibrateHeavy()
+    {
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+    }
+   
 }
 
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		544CD66B228FF7F6001F24BE /* PlayAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544CD66A228FF7F6001F24BE /* PlayAreaViewController.swift */; };
 		544CD66D228FFC83001F24BE /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544CD66C228FFC83001F24BE /* FinishViewController.swift */; };
+		54D8234A229393C7007FDAE3 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D82349229393C7007FDAE3 /* LoadingViewController.swift */; };
+		54D8234C2293A530007FDAE3 /* laugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54D8234B2293A52F007FDAE3 /* laugh.mp3 */; };
 		54EE15FF22927D7A00281275 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE15FE22927D7A00281275 /* GameOverViewController.swift */; };
 		54F0EEB1228FF5C10053C5FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F0EEB0228FF5C10053C5FC /* AppDelegate.swift */; };
 		54F0EEB3228FF5C10053C5FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F0EEB2228FF5C10053C5FC /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		544CD66A228FF7F6001F24BE /* PlayAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayAreaViewController.swift; sourceTree = "<group>"; };
 		544CD66C228FFC83001F24BE /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		54D82349229393C7007FDAE3 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		54D8234B2293A52F007FDAE3 /* laugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = laugh.mp3; path = ../../laugh.mp3; sourceTree = "<group>"; };
 		54EE15FE22927D7A00281275 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		54F0EEAD228FF5C10053C5FC /* NanoChallenge1Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge1Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F0EEB0228FF5C10053C5FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +67,11 @@
 				54F0EEB0228FF5C10053C5FC /* AppDelegate.swift */,
 				54F0EEB2228FF5C10053C5FC /* ViewController.swift */,
 				54F0EEB4228FF5C10053C5FC /* Main.storyboard */,
+				54D82349229393C7007FDAE3 /* LoadingViewController.swift */,
 				54EE15FE22927D7A00281275 /* GameOverViewController.swift */,
 				544CD66C228FFC83001F24BE /* FinishViewController.swift */,
 				544CD66A228FF7F6001F24BE /* PlayAreaViewController.swift */,
+				54D8234B2293A52F007FDAE3 /* laugh.mp3 */,
 				54F0EEB7228FF5C20053C5FC /* Assets.xcassets */,
 				54F0EEB9228FF5C20053C5FC /* LaunchScreen.storyboard */,
 				54F0EEBC228FF5C20053C5FC /* Info.plist */,
@@ -131,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D8234C2293A530007FDAE3 /* laugh.mp3 in Resources */,
 				54F0EEBB228FF5C20053C5FC /* LaunchScreen.storyboard in Resources */,
 				54F0EEB8228FF5C20053C5FC /* Assets.xcassets in Resources */,
 				54F0EEB6228FF5C10053C5FC /* Main.storyboard in Resources */,
@@ -149,6 +156,7 @@
 				544CD66B228FF7F6001F24BE /* PlayAreaViewController.swift in Sources */,
 				54F0EEB1228FF5C10053C5FC /* AppDelegate.swift in Sources */,
 				54EE15FF22927D7A00281275 /* GameOverViewController.swift in Sources */,
+				54D8234A229393C7007FDAE3 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
